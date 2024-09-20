@@ -9,7 +9,7 @@ function Home() {
     <div className=" w-full">
       <div className=" ">
         <div className="container shadow-xl mx-auto mt-8">
-          <div className="flex ">
+          <div className="flex relative ">
             <Sidebar />
 
             {/* Main Slider Content */}

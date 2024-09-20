@@ -7,20 +7,18 @@ function Sidebar() {
         <div className="w-1/4 hidden lg:block bg-white p-4 ">
           <h2 className="font-semibold mb-4">Categories</h2>
             {category.map((category) => (
-          <ul key={category.id}>
-              <li onMouseEnter={() => setHoveredCategory(category.id)}
-              onMouseLeave={() => setHoveredCategory(null)}
-             className="mb-2 text-sm text-gray-700 cursor-pointer">
+          <ul key={category.id} onMouseEnter={() => setHoveredCategory(category.id)}
+          onMouseLeave={() => setHoveredCategory(null)} className=" hover:bg-gray-100 transition rounded-lg p-2">
+              <li 
+             className="mb-2 hover:text-red-400 text-sm text-gray-700 cursor-pointer">
                 {category.cat}
-                {/* {category.subcat.map((subcat)=>(
-                  <p key={category.id}>{subcat.head}</p>
-                ))} */}
               </li>
                 {hoveredCategory === category.id && (
-                  <ul className="absolute right-[25%] top-[35%] ml-4 p-2 w-1/2 z-40 min-h-[400px] bg-white border border-gray-200 shadow-xl rounded-lg">
+                  <ul onMouseEnter={() => setHoveredCategory(category.id)}
+                  onMouseLeave={() => setHoveredCategory(null)} className=" cursor-pointer transition absolute right-[26%] top-[0%] ml-4 p-2 w-1/2 z-40 min-h-[400px] bg-white border border-gray-200 shadow-2xl rounded-lg">
                     {category.subcat.map((sub, idx) => (
-                      <li key={idx} className="p-2 hover:bg-gray-100">
-                        {sub.head}
+                      <li key={idx} className="p-2">
+                        <div className=" font-bold">{sub.head}</div>
                         {sub.details.map((detail)=>(
                           <>
                           <li className="p-2 hover:bg-gray-100">
