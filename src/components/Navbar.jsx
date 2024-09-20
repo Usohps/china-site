@@ -140,6 +140,7 @@ function Navbar() {
                 <p className="hover:text-red-400">Inquiry Basket</p>
               </div>
             </div>
+            {/* All Nav hover components starts here */}
             {signinHovered && (
               <div
                 onMouseEnter={() => setSignInHovered(true)}
@@ -194,6 +195,66 @@ function Navbar() {
                 </button>
               </div>
             )}
+            {supplierHover && (
+              <div
+                onMouseEnter={() => setSupplierHoverd(true)}
+                onMouseLeave={() => setSupplierHoverd(false)}
+                className="absolute p-3 z-10 w-1/5 min-h-[300px] space-y-3 text-center rounded-2xl shadow-2xl bg-white top-[40px] right-16 transition"
+              >
+              
+              </div>
+            )}
+            {helpHovered && (
+              <div
+                onMouseEnter={() => setHelpHovered(true)}
+                onMouseLeave={() => setHelpHovered(false)}
+                className="absolute p-3 z-10 w-1/5 space-y-3 text-center rounded-2xl shadow-2xl bg-white top-[65px] right-16 transition"
+              >
+                <p className="text-sm text-gray-400">
+                  Sign in to view the new messages
+                </p>
+                <button className="bg-red-600 p-1 text-white w-full rounded-xl">
+                  <a href="/login">Sign In</a>
+                </button>
+                <button className="bg-white p-1 text-red-400 border-red-600 border mt-4 w-full rounded-xl">
+                  <a href="/register">Join Free</a>
+                </button>
+              </div>
+            )}
+            {buyerHover && (
+              <div
+                onMouseEnter={() => setBuyerHovered(true)}
+                onMouseLeave={() => setBuyerHovered(false)}
+                className="absolute p-3 z-10 w-1/5 space-y-3 text-center rounded-2xl shadow-2xl bg-white top-[65px] right-16 transition"
+              >
+                <p className="text-sm text-gray-400">
+                  Sign in to view the new messages
+                </p>
+                <button className="bg-red-600 p-1 text-white w-full rounded-xl">
+                  <a href="/login">Sign In</a>
+                </button>
+                <button className="bg-white p-1 text-red-400 border-red-600 border mt-4 w-full rounded-xl">
+                  <a href="/register">Join Free</a>
+                </button>
+              </div>
+            )}
+            {supplierHover && (
+              <div
+                onMouseEnter={() => setMessageHover(true)}
+                onMouseLeave={() => setMessageHover(false)}
+                className="absolute p-3 z-10 w-1/5 space-y-3 text-center rounded-2xl shadow-2xl bg-white top-[65px] right-16 transition"
+              >
+                <p className="text-sm text-gray-400">
+                  Sign in to view the new messages
+                </p>
+                <button className="bg-red-600 p-1 text-white w-full rounded-xl">
+                  <a href="/login">Sign In</a>
+                </button>
+                <button className="bg-white p-1 text-red-400 border-red-600 border mt-4 w-full rounded-xl">
+                  <a href="/register">Join Free</a>
+                </button>
+              </div>
+            )}
             {postHovered && (
               <div
                 onMouseEnter={() => setPostHovered(true)}
@@ -203,6 +264,7 @@ function Navbar() {
                 <p>Tell us what you need and try the easy way to get quotes!</p>
               </div>
             )}
+            {/* Hover components Ends here */}
           </div>
           <div>
             <div className="flex flex-col items-center justify-center px-8">
@@ -215,52 +277,55 @@ function Navbar() {
             <div className=" border-t-[1px] hidden lg:flex items-center justify-between gap-5 text-left">
               {/* Dropdown Toggle Button */}
               <div className="flex items-center ">
-              <div>
-                <a href="#" className="md:hidden block">
-                  All
-                </a>
-                <button
-                  type="button"
-                  onMouseEnter={() => setCategoryOpen(true)}
-                  onMouseLeave={() => setCategoryOpen(false)}
-                  // onClick={() => setCategoryOpen(!categoryOpen)}
-                  className="hidden md:inline-flex justify-center w-full rounded-md  mt-2 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 focus:outline-none"
-                  id="menu-button"
-                  aria-expanded="true"
-                  aria-haspopup="true"
-                >
-                  All Categories
-                  <svg
-                    className="-mr-1 ml-2 h-5 w-5"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    aria-hidden="true"
+                <div>
+                  <a href="#" className="md:hidden block">
+                    All
+                  </a>
+                  <button
+                    type="button"
+                    onMouseEnter={() => setCategoryOpen(true)}
+                    onMouseLeave={() => setCategoryOpen(false)}
+                    // onClick={() => setCategoryOpen(!categoryOpen)}
+                    className="hidden md:inline-flex justify-center w-full rounded-md  mt-2 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 focus:outline-none"
+                    id="menu-button"
+                    aria-expanded="true"
+                    aria-haspopup="true"
                   >
-                    <path
-                      fillRule="evenodd"
-                      d="M5.293 7.707a1 1 0 011.414 0L10 11.414l3.293-3.707a1 1 0 011.414 0 1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </button>
-              </div>
-              <div className="border-l-2 inline-flex p-1 mt-2 pl-2 gap-4">
-                <p className="hover:text-red-400 cursor-pointer">
-                  Secured Trading Service
-                </p>
-                <p className="hover:text-red-400 cursor-pointer">
-                  Video Channel
-                </p>
-                <p className="hover:text-red-400 cursor-pointer">
-                  Top-Ranking Products
-                </p>
-              </div>
+                    All Categories
+                    <svg
+                      className="-mr-1 ml-2 h-5 w-5"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M5.293 7.707a1 1 0 011.414 0L10 11.414l3.293-3.707a1 1 0 011.414 0 1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div className="border-l-2 inline-flex p-1 mt-2 pl-2 gap-4">
+                  <p className="hover:text-red-400 cursor-pointer">
+                    Secured Trading Service
+                  </p>
+                  <p className="hover:text-red-400 cursor-pointer">
+                    Video Channel
+                  </p>
+                  <p className="hover:text-red-400 cursor-pointer">
+                    Top-Ranking Products
+                  </p>
+                </div>
               </div>
               {/* Dropdown Menu */}
               {categoryOpen && (
-                <ul onMouseEnter={() => setCategoryOpen(true)}
-                onMouseLeave={() => setCategoryOpen(false)} className=" absolute left-[0%] top-[100%] ml-2 p-2 w-1/2 z-40 min-h-[400px] bg-white border border-gray-200 shadow-xl rounded-lg">
+                <ul
+                  onMouseEnter={() => setCategoryOpen(true)}
+                  onMouseLeave={() => setCategoryOpen(false)}
+                  className=" absolute left-[0%] top-[100%] ml-2 p-2 w-1/2 z-40 min-h-[400px] bg-white border border-gray-200 shadow-xl rounded-lg"
+                >
                   <div
                     className={`grid ${
                       sortedCategories.length < 6
@@ -281,14 +346,25 @@ function Navbar() {
                   </div>
                 </ul>
               )}
-              
+
               <div className="w-1/3 flex justify-center items-center p-1 mt-2 pl-2 gap-4">
                 <div className="border-r-2 gap-4 px-4 inline-flex">
-                  <p className="hover:text-red-400 cursor-pointer">Suppliers</p>
-                  <p className="hover:text-red-400 cursor-pointer">Buyers</p>
+                  <div
+                    onMouseEnter={() => setSupplierHoverd(true)}
+                    onMouseLeave={() => setSupplierHoverd(false)}
+                  >
+                    <p className="hover:text-red-400 cursor-pointer">
+                      Suppliers
+                    </p>
+                  </div>
+                  <div>
+                    <p className="hover:text-red-400 cursor-pointer">Buyers</p>
+                  </div>
                 </div>
                 <div className="gap-8  inline-flex">
-                  <p className="hover:text-red-400 cursor-pointer">Help</p>
+                  <div>
+                    <p className="hover:text-red-400 cursor-pointer">Help</p>
+                  </div>
                   <p className="hover:text-red-400 cursor-pointer">Apps</p>
                   <p className="hover:text-red-400 cursor-pointer">English</p>
                 </div>
